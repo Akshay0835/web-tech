@@ -162,3 +162,33 @@ baleCake().then((message)=>{
 }).catch((error)=>{
     console.log(error)
 })
+
+
+console.log("1")
+
+setTimeout(()=>{
+    console.log("2")
+},5000)
+
+console.log("3")
+
+console.log("before Execution")
+for(var i=0;i<2;i++){
+    setTimeout(function(){
+        console.log("Set time put message")
+        func1()
+    },1000)
+    func2()
+}
+
+console.log("After Execution")
+
+function func1(){
+    console.log("Function 1")
+}
+
+function func2(){
+    console.log("Function 2")
+}
+
+
