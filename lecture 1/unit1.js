@@ -230,3 +230,33 @@ bakeCake().then((msg)=>{
     console.log(msg)
     console.log("3. Go to pizza inst")
 })
+
+
+function bakeCake(){
+    return new Promise((myresolve,myreject)=>{
+        console.log("1. Baking cake")
+        setTimeout(() => {
+            let flag=false;
+            if(flag){
+                myresolve("2. Cake is ready")
+            }else{
+                myreject("2. Cake is burnt")
+            }
+        }, 2000);
+    })
+}
+
+async function party(){
+    console.log("1. Start Baking")
+    try{
+        const cake=await bakeCake();
+        console.log(cake)
+        console.log("3. Enjoy the cake")
+    }
+    catch(e){
+        console.log(e)
+        console.log("3. Go to pizza inst")
+    }
+}
+
+party()
