@@ -191,4 +191,20 @@ function func2(){
     console.log("Function 2")
 }
 
+console.log("1 . Start")
+setTimeout(()=>{
+    console.log("2. Cake is ready to eat");
+},2000)
+console.log("3. End")
 
+function bakeCake(mycallback){
+    console.log("1. Cake is in the oven")
+    setTimeout(()=>{
+        console.log("2. Cake is baked")
+        mycallback()
+    },2000)
+}
+
+bakeCake(()=>{
+    console.log("3. cake is ready")
+})
