@@ -260,5 +260,6 @@ async function party(){
 }
 
 party()
-//
-//jhh
+ function abc(){
+    console.log("Hello")
+ }
